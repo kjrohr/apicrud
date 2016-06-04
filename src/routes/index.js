@@ -1,10 +1,13 @@
 module.exports = (express) =>{
   const router = express.Router();
 
-  router.post('/hello', (req,res) => {
-    console.log('route was hit: ', req.body);
+  router.post('/status', (req,res) => {
     res.json({healthy: 'true'});
   });
+
+  //Routes
+  router.use('/api/', require('./api/users')(express));
+
 
   return router;
 };
