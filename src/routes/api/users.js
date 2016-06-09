@@ -3,7 +3,19 @@ module.exports = (express) => {
   const router = express.Router();
 
   router.get('/users', (req, res) => {
-    res.json({ healthy: 'true' });
+    user.findAll((err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
+  router.get('/users/:id', (req, res) => {
+    user.find((err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
   });
 
 
@@ -15,5 +27,8 @@ module.exports = (express) => {
       res.status(200).json(data);
     });
   });
+
+
+
   return router;
 };

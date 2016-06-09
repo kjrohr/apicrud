@@ -33,6 +33,10 @@ const course = sequelize.define('course', {
   },
 });
 
+// course.hasMany(user, {
+//   foreignKey: 'courseID',
+// });
+
 sequelize.sync();
 
 exports.sequelize = sequelize;
