@@ -32,7 +32,7 @@ updatedAt: "2016-06-09T02:42:28.000Z"
 ```
 
 
-## Dummy Data apps by ID - /api/users/users id goes here
+## User by ID - /api/users/users id goes here
 ### /api/users/3 would return Lindsay Hamptons information
 ``` javascript
 
@@ -47,6 +47,3 @@ updatedAt: "2016-06-09T02:26:14.000Z"
 
 
 ```
-
-## User by id - localhost:3000/api/users/userIDGoesHere
-    Karl Rohr
