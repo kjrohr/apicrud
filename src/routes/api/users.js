@@ -1,8 +1,9 @@
-module.exports = (express) =>{
+const user = require('../../models/user');
+module.exports = (express) => {
   const router = express.Router();
 
-  router.get('/users', (req,res) => {
-    res.json({healthy: 'true'});
+  router.get('/users', (req, res) => {
+    res.json({ healthy: 'true' });
   });
 
   return router;
