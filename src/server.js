@@ -13,5 +13,5 @@ app.use(bodyParser.urlencoded({
 app.use('/', require('./routes')(express));
 
 exports.server = app.listen(port, () => {
-  util.debug('Server is running on port: ' + port);
+  util.debug('Server is running on port: ', port);
 });

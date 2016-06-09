@@ -7,21 +7,30 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   pool: {
     max: 5,
     min: 0,
-    idle: 10000
+    idle: 10000,
   },
-  logging: false
+  logging: false,
 });
 
-const user = sequelize.define('user',{
+const user = sequelize.define('user', {
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   age: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
   },
   hobby: {
-    type: Sequelize.STRING
-  }
+    type: Sequelize.STRING,
+  },
+});
+
+const course = sequelize.define('course', {
+  name: {
+    type: Sequelize.STRING,
+  },
+  code: {
+    type: Sequelize.STRING,
+  },
 });
 
 sequelize.sync();
