@@ -66,7 +66,7 @@ This is a simple restful api demonstration with CRUD using test data from the po
 ```
 
 ## Users /api/users
-''' javascript
+``` javascript
 [
 {
 id: 3,
@@ -93,7 +93,7 @@ createdAt: "2016-06-09T02:42:28.000Z",
 updatedAt: "2016-06-09T02:42:28.000Z"
 }
 ]
-'''
+```
 
 
 ## Dummy Data apps by ID - /api/apps/appIDGoesHeree
