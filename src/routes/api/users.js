@@ -6,5 +6,14 @@ module.exports = (express) => {
     res.json({ healthy: 'true' });
   });
 
+
+  // create
+  router.post('/users', (req, res) => {
+    user.create(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
   return router;
 };
